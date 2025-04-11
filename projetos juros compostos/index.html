@@ -38,13 +38,18 @@
                     <input type="number" id="input-anoInicial" required>
                 </label>
             </div>
-
-            <button id="btn-calcular" onclick="calcularResultados()">
-                Calcular
-            </button>
+            
+            <div class="div-btns">
+                <button id="btn-calcular" onclick="calcularResultados()">
+                    Calcular
+                </button>
+                <button id="btn-resetar" onclick="reset()">
+                    Resetar
+                </button>
+            </div>
         </div>
 
-        <div class="container"> 
+        <div class="container">
             <div class="div-resultados">
                 <h2>Resultados</h2>
                 <div id="resultados">

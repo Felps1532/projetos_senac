@@ -52,7 +52,7 @@ input {
     height: 25px;
 }
 
-#btn-calcular {
+#btn-calcular, #btn-resetar {
     padding: 10px 50px;
     font-size: 20px;
     font-weight: bold;
@@ -61,16 +61,21 @@ input {
     border-radius: 10px;
 }
 
-#btn-calcular:hover {
+#btn-calcular:hover, #btn-resetar:hover{
     cursor: pointer;
     background-color: black;
     color: white;
 }
 
-#btn-calcular:active {
+#btn-calcular:active, #btn-resetar:active {
     background-color: white;
     color: black;
 }    
+
+.div-btns {
+    display: flex;
+    gap: 30px;
+}
 
 .tbl-titulos  {
     border-collapse: collapse;
