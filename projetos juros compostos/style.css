@@ -13,7 +13,6 @@
     flex-direction: column;
     margin: 50px 0;
     gap: 50px;
-    
 }
 
 .campos {
@@ -30,6 +29,15 @@
 .campos h2 {
     margin: 20px 0;
     text-align: center;
+}
+
+.div-resultados {
+    border: solid black 1px;
+}
+
+.div-resultados h2 {
+    text-align: center;
+    margin: 10px;
 }
 
 label {
@@ -63,3 +71,13 @@ input {
     background-color: white;
     color: black;
 }    
+
+.tbl-titulos  {
+    border-collapse: collapse;
+}
+
+.tbl-titulos td {
+    border: solid black 1px;
+    border-collapse: collapse;
+    padding: 5px 25px;
+}
