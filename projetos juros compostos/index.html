@@ -13,7 +13,6 @@
         <div class="container">
             <div class="campos">
                 <h2>Preencha os campos</h2>
-                
                 <label class="label" for="">
                     Valor inicial
                     <input type="number">
@@ -39,12 +38,18 @@
                     <input type="number">
                 </label>
             </div>
+
+            <button id="btn-calcular" onclick="calcularResultados()">
+                Calcular
+            </button>
         </div>
 
         <div class="container"> 
-            <h2>Preencha os campos</h2>
-            <div class="resultados">
-                <p>Resultados saem aqui</p>
+            <h2>Resultados</h2>
+            <div id="resultados">
+                <table id="tbl-resultados">
+
+                </table>
             </div>
         </div>
 
