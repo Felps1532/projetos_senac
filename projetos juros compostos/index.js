@@ -5,27 +5,25 @@ function calcularResultados() {
     let numMeses = document.getElementById('input-numMeses').value;
     let mesInicial = document.getElementById('input-mesInicial').value;
     let anoInicial = document.getElementById('input-anoInicial').value;
+    
+    let resultadoFinal;
 
-    // TESTE DOS VALORES DOS INPUTS
-    document.getElementById('resultados').innerHTML = valorInicial + " | " +
-        investMensal + " | " + jurosAno + " | " + numMeses + " | " + mesInicial + " | " +
-        anoInicial;
-
-    for (let i; i <= numMeses; i++) {
-        // document.getElementById('resultados').innerHTML = 
-        //     "<table class='tbl-titulos'>" +
-        //         "<tr>" +
-        //             "<td>Sequência</td>" +
-        //             "<td>Mês</td>" +
-        //             "<td>Ano</td>" +
-        //             "<td>Valor interior</td>" +
-        //             "<td>Rendimento</td>" +
-        //             "<td>Valor final</td>" +
-        //         "</tr>" +
-        //     "</table>";
+    for (let i=0; i <= numMeses; i++) {
+        resultadoFinal += document.getElementById('resultados').innerHTML = 
+            document.getElementById('resultados').innerHTML = 
+                "<table class='tbl-titulos'>" +
+                    "<tr>" +
+                        "<td>Sequência</td>" +
+                        "<td>Mês</td>" +
+                        "<td>Ano</td>" +
+                        "<td>Valor interior</td>" +
+                        "<td>Rendimento</td>" +
+                        "<td>Valor final</td>" +
+                    "</tr>" +
+                "</table>";
     }
 
-    
+    document.getElementById('resultados').innerHTML = resultadoFinal;
 
 } 
 
