@@ -5,39 +5,59 @@ function calcularResultados() {
     let numMeses = document.getElementById('input-numMeses').value;
     let mesInicial = document.getElementById('input-mesInicial').value;
     let anoInicial = document.getElementById('input-anoInicial').value;
+    let sequencia;
     
     let resultadoFinal = "";
 
-    for (let i = 0; i < numMeses; i++) {
-        resultadoFinal += 
-        "<table class='resultados'>" +
-                "<tr>" +
-                    "<td></td>" +
-                    "<td></td>" +
-                    "<td></td>" +
-                    "<td></td>" +
-                    "<td></td>" +
-                    "<td></td>" +
-                "</tr>" +
-            "</table>";
-            
-    }
-
-    document.getElementById('resultados').innerHTML = + resultadoFinal;
-
-} 
-
-function reset() {
-    document.getElementById('resultados').innerHTML = 
+    // if (valorInicial === "" || investMensal === "" || jurosAno === "" || numMeses === "" || mesInicial === "" || anoInicial === "") {}
+    
+    if (valorInicial != null) {
+        resultadoFinal = "<p style='color: red; text-align: center;'>Há campos vazios!</p><br>" +
             "<table class='tbl-titulos'>" +
                 "<tr>" +
                     "<td>Sequência</td>" +
                     "<td>Mês</td>" +
                     "<td>Ano</td>" +
-                    "<td>Valor interior</td>" +
+                    "<td>Valor inicial</td>" +
+                    "<td>Rendimento</td>" +
+                    "<td>Valor final</td>" +
+                "</tr>";
+        
+    } else {
+        numMeses = parseInt(numMeses);
+
+        for (let i = 0; i < numMeses; i++) {
+            sequencia += 1;
+
+            resultadoFinal += 
+            "<table class='resultados'>" +
+                    "<tr>" +
+                        "<td>"+ sequencia +"</td>" +
+                        "<td></td>" +
+                        "<td></td>" +
+                        "<td></td>" +
+                        "<td></td>" +
+                        "<td></td>" +
+                    "</tr>" +
+                "</table>";
+        }
+
+        resultadoFinal = "<table class='tbl-titulos'>" +
+                "<tr>" +
+                    "<td>Sequência</td>" +
+                    "<td>Mês</td>" +
+                    "<td>Ano</td>" +
+                    "<td>Valor inicial</td>" +
                     "<td>Rendimento</td>" +
                     "<td>Valor final</td>" +
                 "</tr>" +
-            "</table>" +
-            resultadoFinal;
+                resultadoFinal +
+            "</table>";      
+    }
+
+    document.getElementById('resultados').innerHTML = resultadoFinal;
+} 
+
+function reset() {
+    document.getElementById('resultados').innerHTML = "";
 }
