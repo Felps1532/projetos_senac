@@ -6,28 +6,38 @@ function calcularResultados() {
     let mesInicial = document.getElementById('input-mesInicial').value;
     let anoInicial = document.getElementById('input-anoInicial').value;
     
-    let resultadoFinal;
+    let resultadoFinal = "";
 
-    for (let i=0; i <= numMeses; i++) {
-        resultadoFinal += document.getElementById('resultados').innerHTML = 
-            document.getElementById('resultados').innerHTML = 
-                "<table class='tbl-titulos'>" +
-                    "<tr>" +
-                        "<td>Sequência</td>" +
-                        "<td>Mês</td>" +
-                        "<td>Ano</td>" +
-                        "<td>Valor interior</td>" +
-                        "<td>Rendimento</td>" +
-                        "<td>Valor final</td>" +
-                    "</tr>" +
-                "</table>";
+    for (let i = 0; i < numMeses; i++) {
+        resultadoFinal += 
+        "<table class='resultados'>" +
+                "<tr>" +
+                    "<td></td>" +
+                    "<td></td>" +
+                    "<td></td>" +
+                    "<td></td>" +
+                    "<td></td>" +
+                    "<td></td>" +
+                "</tr>" +
+            "</table>";
+            
     }
 
-    document.getElementById('resultados').innerHTML = resultadoFinal;
+    document.getElementById('resultados').innerHTML = + resultadoFinal;
 
 } 
 
-
 function reset() {
-    document.getElementById('resultados').innerHTML = "";
+    document.getElementById('resultados').innerHTML = 
+            "<table class='tbl-titulos'>" +
+                "<tr>" +
+                    "<td>Sequência</td>" +
+                    "<td>Mês</td>" +
+                    "<td>Ano</td>" +
+                    "<td>Valor interior</td>" +
+                    "<td>Rendimento</td>" +
+                    "<td>Valor final</td>" +
+                "</tr>" +
+            "</table>" +
+            resultadoFinal;
 }
